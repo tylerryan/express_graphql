@@ -1,0 +1,5 @@
+{
+  "require": {
+    "webonyx/graphql-php": "^v14.11.0"
+  }
+}
