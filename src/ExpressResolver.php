@@ -14,7 +14,6 @@ class ExpressResolver
         $list = new EntryList($entity);
         $ingredients = $list->getResults();
 
-        //echo var_dump_safe($ingredients); exit;
         $items = array();
         foreach($ingredients as $ingredient) {
             $item = array('id'=>$ingredient->getID());
