@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Handler for GraphQL query requests
+ */
+
 namespace Concrete\Package\ExpressGraphql\Controller;
 
 use Concrete\Core\Controller\Controller;
@@ -7,7 +11,6 @@ use Concrete\Core\Http\Request;
 use Concrete\Package\ExpressGraphql\ExpressResolvers;
 use Concrete\Package\ExpressGraphql\ExpressSchema;
 use Symfony\Component\HttpFoundation\JsonResponse;
-
 
 class ExpressGraphql extends Controller
 {

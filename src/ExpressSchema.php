@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Maps Express data objects to a Graphql Schema
+ */
+
 namespace Concrete\Package\ExpressGraphql;
 
 use Concrete\Core\Package\ItemCategory\ExpressEntity;
@@ -11,6 +15,11 @@ use GraphQL\Type\Schema;
 class ExpressSchema
 {
 
+    /**
+     * gets the GraphQL schema object for all public Express entities
+     * @TODO implement caching...
+     * @return Schema
+     */
     public static function get()
     {
         $fields = array();
@@ -67,7 +76,7 @@ class ExpressSchema
                                           ]
                                       ]);
 
-        // @TODO build out default resolver to handle dynamic types
+        // @TODO build out default resolver to handle express types dynamically
         $results = [
             'type' => $result_items,
             'resolve' => function($root, $args) {
